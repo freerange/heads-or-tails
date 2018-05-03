@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-  ['heads', 'tails'].shuffle.first
+  { toss: ['heads', 'tails'].shuffle.first }.to_json
 end
